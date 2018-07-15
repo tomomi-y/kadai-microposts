@@ -7,6 +7,7 @@
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
+      <%= link_to likes_user_path(@user) do %>お気に入り一覧へ<span><%= @count_likes %></span><% end %>
     </aside>
     <div class="col-xs-8">
       <%= render 'microposts/microposts', microposts: @microposts %>
